@@ -2,20 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotateFormation : MonoBehaviour
+public static class RotateController
 {
-    [SerializeField] private KeyCode keyRotateLeft;
-    [SerializeField] private KeyCode keyRotateRight;
-    [SerializeField] private float rotationSpeed;
-
-    private void FixedUpdate()
+    public static void Rotating(Transform transform,GameObject pivotObject, float rotateSpeed, KeyCode keyRotateLeft, KeyCode keyRotateRight)
     {
         if (Input.GetKey(keyRotateLeft))
         {
-            transform.Rotate(0, 0, rotationSpeed * Time.fixedDeltaTime);
+            transform.RotateAround(pivotObject.transform.position, new Vector3(0, 0, 1), rotateSpeed);
         } else if (Input.GetKey(keyRotateRight))
         {
-            transform.Rotate(0, 0, -rotationSpeed * Time.fixedDeltaTime);
+            transform.RotateAround(pivotObject.transform.position, new Vector3(0, 0, -1), rotateSpeed);
         }
     }
 }

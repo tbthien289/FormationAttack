@@ -534,6 +534,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootingInterval: 1
   canShoot: 1
+  moveSpeed: 10
+  rotateSpeed: 2
+  pivotObject: {fileID: 1064176760}
+  keyRotateLeft: 113
+  keyRotateRight: 101
 --- !u!212 &181849254
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -730,6 +735,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootingInterval: 1
   canShoot: 1
+  moveSpeed: 10
+  rotateSpeed: 2
+  pivotObject: {fileID: 1064176760}
+  keyRotateLeft: 113
+  keyRotateRight: 101
 --- !u!212 &304742613
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2309,6 +2319,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootingInterval: 1
   canShoot: 1
+  moveSpeed: 10
+  rotateSpeed: 2
+  pivotObject: {fileID: 1064176760}
+  keyRotateLeft: 113
+  keyRotateRight: 101
 --- !u!212 &1038613152
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2385,7 +2400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1064176762}
   - component: {fileID: 1064176761}
-  - component: {fileID: 1064176764}
+  - component: {fileID: 1064176770}
   - component: {fileID: 1064176769}
   - component: {fileID: 1064176768}
   - component: {fileID: 1064176765}
@@ -2467,20 +2482,6 @@ Transform:
   m_Father: {fileID: 474238163}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1064176764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1064176760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90ea59b51f16cce47bfa87f20ebe4f05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shootingInterval: 1
-  canShoot: 1
 --- !u!50 &1064176765
 Rigidbody2D:
   serializedVersion: 4
@@ -2557,6 +2558,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 7798785301758482202, guid: 88acf78c606f5e44f9032070d93d8c61, type: 3}
   firePoint: {fileID: 475719038}
+--- !u!114 &1064176770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064176760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ea59b51f16cce47bfa87f20ebe4f05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootingInterval: 2
+  canShoot: 1
+  moveSpeed: 10
+  rotateSpeed: 2
+  pivotObject: {fileID: 0}
+  keyRotateLeft: 113
+  keyRotateRight: 101
 --- !u!1 &1141857328
 GameObject:
   m_ObjectHideFlags: 0

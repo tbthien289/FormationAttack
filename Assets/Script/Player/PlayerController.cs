@@ -10,8 +10,11 @@ public class PlayerController : MonoBehaviour
 
     public float shootingInterval = 2.0f;
     public bool canShoot = true;
-    [SerializeField]
-    private float moveSpeed = 10.0f;
+    [SerializeField] private float moveSpeed = 10.0f;
+    [SerializeField] private float rotateSpeed = 2f;
+    [SerializeField] private GameObject pivotObject;
+    [SerializeField] private KeyCode keyRotateLeft;
+    [SerializeField] private KeyCode keyRotateRight;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +29,9 @@ public class PlayerController : MonoBehaviour
     {
         // Moving
         MovingController.Moving(rb, moveSpeed);
+        // Rotating
+        if (pivotObject != null)
+        RotateController.Rotating(transform, pivotObject, rotateSpeed, keyRotateLeft, keyRotateRight);
         // Find target
         target = CommonUtils.FindClosestObject(this.gameObject, "Enemy");
 
