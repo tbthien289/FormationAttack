@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DealDamageOnTouch : MonoBehaviour
+public class DealDamageOnTouchController : MonoBehaviour
 {
     [SerializeField] private float damage;
     public string targetTag;

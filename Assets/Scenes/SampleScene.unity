@@ -450,6 +450,7 @@ GameObject:
   - component: {fileID: 181849251}
   - component: {fileID: 181849250}
   - component: {fileID: 181849249}
+  - component: {fileID: 181849257}
   m_Layer: 0
   m_Name: Soldier (1)
   m_TagString: Player
@@ -531,12 +532,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ea59b51f16cce47bfa87f20ebe4f05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 7798785301758482202, guid: 88acf78c606f5e44f9032070d93d8c61, type: 3}
-  firePoint: {fileID: 1165815800}
-  bulletSpeed: 10
   shootingInterval: 1
   canShoot: 1
-  target: {fileID: 0}
 --- !u!212 &181849254
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -620,6 +617,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1064176762}
+--- !u!114 &181849257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181849248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b346b7fc5881b6342abcf55c58011cab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 7798785301758482202, guid: 88acf78c606f5e44f9032070d93d8c61, type: 3}
+  firePoint: {fileID: 1165815800}
 --- !u!1 &304742607
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,6 +646,7 @@ GameObject:
   - component: {fileID: 304742610}
   - component: {fileID: 304742609}
   - component: {fileID: 304742608}
+  - component: {fileID: 304742616}
   m_Layer: 0
   m_Name: Soldier
   m_TagString: Player
@@ -716,12 +728,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ea59b51f16cce47bfa87f20ebe4f05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 7798785301758482202, guid: 88acf78c606f5e44f9032070d93d8c61, type: 3}
-  firePoint: {fileID: 688313070}
-  bulletSpeed: 10
   shootingInterval: 1
   canShoot: 1
-  target: {fileID: 0}
 --- !u!212 &304742613
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -805,6 +813,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1064176762}
+--- !u!114 &304742616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304742607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b346b7fc5881b6342abcf55c58011cab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 7798785301758482202, guid: 88acf78c606f5e44f9032070d93d8c61, type: 3}
+  firePoint: {fileID: 688313070}
 --- !u!1 &323993829
 GameObject:
   m_ObjectHideFlags: 0
@@ -1246,7 +1268,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474238162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.39, y: -3.1, z: 0}
+  m_LocalPosition: {x: -7.83, y: -3.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2172,6 +2194,7 @@ GameObject:
   - component: {fileID: 1038613149}
   - component: {fileID: 1038613148}
   - component: {fileID: 1038613147}
+  - component: {fileID: 1038613153}
   m_Layer: 0
   m_Name: Soldier (2)
   m_TagString: Player
@@ -2284,12 +2307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ea59b51f16cce47bfa87f20ebe4f05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 7798785301758482202, guid: 88acf78c606f5e44f9032070d93d8c61, type: 3}
-  firePoint: {fileID: 1346519197}
-  bulletSpeed: 10
   shootingInterval: 1
   canShoot: 1
-  target: {fileID: 0}
 --- !u!212 &1038613152
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2342,6 +2361,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1038613153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038613145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b346b7fc5881b6342abcf55c58011cab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 7798785301758482202, guid: 88acf78c606f5e44f9032070d93d8c61, type: 3}
+  firePoint: {fileID: 1346519197}
 --- !u!1 &1064176760
 GameObject:
   m_ObjectHideFlags: 0
@@ -2353,6 +2386,7 @@ GameObject:
   - component: {fileID: 1064176762}
   - component: {fileID: 1064176761}
   - component: {fileID: 1064176764}
+  - component: {fileID: 1064176769}
   - component: {fileID: 1064176768}
   - component: {fileID: 1064176765}
   - component: {fileID: 1064176766}
@@ -2445,12 +2479,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ea59b51f16cce47bfa87f20ebe4f05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 7798785301758482202, guid: 88acf78c606f5e44f9032070d93d8c61, type: 3}
-  firePoint: {fileID: 475719038}
-  bulletSpeed: 10
   shootingInterval: 1
   canShoot: 1
-  target: {fileID: 0}
 --- !u!50 &1064176765
 Rigidbody2D:
   serializedVersion: 4
@@ -2513,6 +2543,20 @@ MonoBehaviour:
   name: 
   maxHealth: 0
   currentHealth: 0
+--- !u!114 &1064176769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064176760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b346b7fc5881b6342abcf55c58011cab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 7798785301758482202, guid: 88acf78c606f5e44f9032070d93d8c61, type: 3}
+  firePoint: {fileID: 475719038}
 --- !u!1 &1141857328
 GameObject:
   m_ObjectHideFlags: 0

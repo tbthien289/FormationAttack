@@ -10,7 +10,7 @@ public class BulletScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<DealDamageOnTouch>().targetTag = target.tag;
+        GetComponent<DealDamageOnTouchController>().targetTag = target.tag;
     }
 
     // Update is called once per frame
