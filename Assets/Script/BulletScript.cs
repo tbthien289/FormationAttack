@@ -10,13 +10,7 @@ public class BulletScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    private void OnTriggerEnter2D(Collider2D colider) {
-        if ((colider.gameObject.name == "MainPlayer" || colider.gameObject.tag == "Enemy") && target.tag == colider.gameObject.tag) {
-            Destroy(this.gameObject);
-        }
+        GetComponent<DealDamageOnTouch>().targetTag = target.tag;
     }
 
     // Update is called once per frame
