@@ -13,10 +13,11 @@ public class ShootingController : MonoBehaviour
     private float bulletSpeed = 10.0f;
     private float shootingInterval = 2.0f;
 
-    public void Shoot(GameObject target)
+    public void Shoot(GameObject target, float damage)
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         bullet.GetComponent<BulletScript>().target = target;
+        bullet.GetComponent<BulletScript>().damage = damage;
     }
 
 }

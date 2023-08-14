@@ -15,4 +15,9 @@ MonoBehaviour:
   soldier:
   - soldierName: Archer
     soldierHealth: 800
-    soldierDamage: 60
+    soldierDamage: 200
+    soldierArmor: 0
+  - soldierName: Shield
+    soldierHealth: 1000
+    soldierDamage: 0
+    soldierArmor: 30

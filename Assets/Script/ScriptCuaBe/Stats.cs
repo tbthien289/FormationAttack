@@ -10,8 +10,11 @@ public class Stats : MonoBehaviour
     [Header("Stats Overal")]
     public string name;
     public float maxHealth;
+    
     [Header("Stats Currently")]
     public float currentHealth;
+    public float currentArmor;
+    public float currentDamage;
 
     private void Awake ()
     {
@@ -30,10 +33,13 @@ public class Stats : MonoBehaviour
         maxHealth = dataLoad.soldier[typeSoldier].soldierHealth;
         currentHealth = maxHealth;
         name = dataLoad.soldier[typeSoldier].soldierName;
+        currentArmor = dataLoad.soldier[typeSoldier].soldierArmor;
+        currentDamage = dataLoad.soldier[typeSoldier].soldierDamage;
     }
     // -- Function tru mau khi dame.
     public void getDamageFunction(float amount)
     {
+        if (amount > 0)
         currentHealth -= amount;
     }
     // -- Function hoi mau.

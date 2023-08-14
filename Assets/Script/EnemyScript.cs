@@ -29,6 +29,7 @@ public class EnemyScript : MonoBehaviour
 
     // Main
     private Rigidbody2D rb;
+    private Stats stats;
     private Vector2 startPosition;
     private float moveSpeed = 3f;
 
@@ -36,6 +37,7 @@ public class EnemyScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        stats = GetComponent<Stats>();
         startPosition = transform.position;
 
         GenerateWaypoint();
@@ -153,6 +155,7 @@ public class EnemyScript : MonoBehaviour
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         bullet.GetComponent<BulletScript>().target = target;
+        bullet.GetComponent<BulletScript>().damage = stats.currentDamage;
     }
 
     void EnemyShootDirection()

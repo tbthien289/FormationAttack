@@ -17,4 +17,5 @@ public class Soldier
     public string soldierName;
     public float soldierHealth;
     public float soldierDamage;
+    public float soldierArmor;
 }

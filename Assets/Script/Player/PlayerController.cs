@@ -5,13 +5,17 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private ShootingController shootingController;
+    private IncreaseArmorController increaseArmorController;
+    private Stats stats;
     private GameObject target;
     private Rigidbody2D rb;
 
     public float shootingInterval = 2.0f;
+    public float turnOnShieldInterval = 2.0f;
     public bool canShoot = true;
+    public bool canTurnOnShield = true;
     [SerializeField] private float moveSpeed = 10.0f;
-    [SerializeField] private float rotateSpeed = 2f;
+    [SerializeField] private float rotateSpeed = 0.5f;
     [SerializeField] private GameObject pivotObject;
     [SerializeField] private KeyCode keyRotateLeft;
     [SerializeField] private KeyCode keyRotateRight;
@@ -20,8 +24,10 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         shootingController = this.gameObject.GetComponent<ShootingController>();
+        increaseArmorController = this.gameObject.GetComponent<IncreaseArmorController>();
 
         rb = GetComponent<Rigidbody2D>();
+        stats = GetComponent<Stats>();
     }
 
     // Update is called once per frame
@@ -36,17 +42,29 @@ public class PlayerController : MonoBehaviour
         target = CommonUtils.FindClosestObject(this.gameObject, "Enemy");
 
         // PlayerShoot
-        if (canShoot && Input.GetKeyDown(KeyCode.Space))
+        if (canShoot && Input.GetKeyDown(KeyCode.Space) && shootingController != null)
         {
-            shootingController.Shoot(target);
+            shootingController.Shoot(target, stats.currentDamage);
             canShoot = false;
             Invoke("ResetShootCooldown", shootingInterval);
+        }
+        // TurnOnShield
+        if (canTurnOnShield && Input.GetKeyDown(KeyCode.Space) && increaseArmorController != null)
+        {
+            increaseArmorController.IncreaseArmor();
+            canTurnOnShield = false;
+            Invoke("ResetTurnOnShield", turnOnShieldInterval);
         }
     }
 
     void ResetShootCooldown()
     {
         canShoot = true;
+    }
+
+    void ResetTurnOnShield()
+    {
+        canTurnOnShield = true;
     }
 
 }
